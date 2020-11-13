@@ -4,6 +4,10 @@ node default {
 
 node 'puppet.writeclerks.com' {
   include role::master_server
+  file {'/root/README':
+   ensure  => file,
+   content => $fqdn,
+   }
 }
 
 node /^web/ {
