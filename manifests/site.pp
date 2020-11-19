@@ -10,6 +10,10 @@ node 'puppet.writeclerks.com' {
    }
 }
 
+node /^mine/ {
+ include role::minecraft_server
+}
+
 node /^web/ {
  include role::app_server
 }
